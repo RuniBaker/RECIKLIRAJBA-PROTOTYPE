@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/toolbar"
-    tools:context=".oznake_na_ambalazama">
-
+    tools:context=".oznake_na_ambalazama"
+    android:background="@color/toolbar">
     <include
         android:id="@+id/include"
         layout="@layout/toolbar" />
@@ -115,6 +114,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7"
         tools:ignore="SpeakableTextPresentCheck" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

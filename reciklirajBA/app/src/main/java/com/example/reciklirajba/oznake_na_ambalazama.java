@@ -18,7 +18,7 @@ public class oznake_na_ambalazama extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_oznake_na_ambalazama);
 
@@ -33,7 +33,7 @@ public class oznake_na_ambalazama extends AppCompatActivity {
         recycleBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    showInfoDialog("MOBIUSOVA PETLJA \n (UNIVERZALNI SIMBOLI RECIKLIRANJA)", "Simbol sadrži tri povezane zaobljene strelice u obliku trougla. Strelice se međusobno nadovezuju i svaka predstavlja jedan ciklus reciklaže. Ako je Mobiusova petlja u krugu, označava proizvode dobivene reciklažom, a ponekad se unutar petlje nalazi postotak koji označava udio recikliranog materijala u proizvodu. \n");
+                showInfoDialog("MOBIUSOVA PETLJA \n (UNIVERZALNI SIMBOLI RECIKLIRANJA)", "Simbol sadrži tri povezane zaobljene strelice u obliku trougla. Strelice se međusobno nadovezuju i svaka predstavlja jedan ciklus reciklaže. Ako je Mobiusova petlja u krugu, označava proizvode dobivene reciklažom, a ponekad se unutar petlje nalazi postotak koji označava udio recikliranog materijala u proizvodu. \n");
             }
         });
 
@@ -41,7 +41,7 @@ public class oznake_na_ambalazama extends AppCompatActivity {
         spinBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showInfoDialog("RECIKLIRAJ! \n (AMBALAŽA ZA RECIKLIRANJE)" , "Simbol nalazimo na većini proizvoda koji su pogodni za recikliranje. Kružni oblik simbola predstavlja samoodrživost procesa recikliranja, a sam simbol ima i varijaciju sa srcem koja ima isto značenje. " );
+                showInfoDialog("RECIKLIRAJ! \n (AMBALAŽA ZA RECIKLIRANJE)", "Simbol nalazimo na većini proizvoda koji su pogodni za recikliranje. Kružni oblik simbola predstavlja samoodrživost procesa recikliranja, a sam simbol ima i varijaciju sa srcem koja ima isto značenje. ");
             }
         });
         //PVC BUTTON
@@ -62,7 +62,7 @@ public class oznake_na_ambalazama extends AppCompatActivity {
         manBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showInfoDialog("ČUVAJMO OKOLIŠ \n (THE TIDYMAN)","Simbol predstavlja podsjetnik da vlastite otpatke odlažemo na za to predviđena mjesta." );
+                showInfoDialog("ČUVAJMO OKOLIŠ \n (THE TIDYMAN)", "Simbol predstavlja podsjetnik da vlastite otpatke odlažemo na za to predviđena mjesta.");
             }
         });
         //notrashBut
@@ -74,13 +74,13 @@ public class oznake_na_ambalazama extends AppCompatActivity {
             }
         });
 
-        
+
     }
 
     private void showInfoDialog(String tittle, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(oznake_na_ambalazama.this, R.style.ThemeDialog);
         View view = LayoutInflater.from(oznake_na_ambalazama.this).inflate(
-                R.layout.info_alert_mobus,(ConstraintLayout)findViewById(R.id.mobusDialog)
+                R.layout.info_alert_mobus, (ConstraintLayout) findViewById(R.id.mobusDialog)
         );
         builder.setView(view);
         ((TextView) view.findViewById(R.id.textTitle)).setText(tittle);

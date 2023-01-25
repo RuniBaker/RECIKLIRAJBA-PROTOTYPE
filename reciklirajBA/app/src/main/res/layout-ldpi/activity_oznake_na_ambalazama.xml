@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/toolbar"
-    tools:context=".oznake_na_ambalazama">
+    tools:context=".oznake_na_ambalazama"
+    android:background="@color/toolbar">
 
     <include
         android:id="@+id/include"
@@ -20,101 +20,87 @@
         android:layout_marginEnd="11dp"
         android:text="Klikni na oznaku i saznaj šta znači!"
         android:textColor="#43A047"
-        android:textSize="25dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/recycle"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
 
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/recycle_transparent_1"
         android:backgroundTint="@color/mainHubGreen"
         android:backgroundTintMode="multiply"
         android:foregroundTint="@color/mainHubGreen"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.057"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/recikliraj"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/numeriranje"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycle"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button6"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/zelena"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/numeriranje"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button7"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="444dp"
-        android:layout_marginEnd="161dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/nezagadjuj"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
-        android:layout_width="90dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="161dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/odvojeno"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7"
         tools:ignore="SpeakableTextPresentCheck" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,41 +11,39 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        String Haroni;
 
         Button button = findViewById(R.id.button);
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
-    try {
-        button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(MainActivity.this, kategorija_otpada.class);
-            startActivity(intent);
+        try {
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, kategorija_otpada.class);
+                    startActivity(intent);
+                }
+            });
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-    });
-    }catch (Exception e){
-        System.out.println(e.getMessage());
-    }
-    try {
-        button1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Gorazde_map.class);
-                startActivity(intent);
-            }
-        });
-        } catch (Exception ee){
-        System.out.println(ee.getMessage());
-    }
+        try {
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, Gorazde_map.class);
+                    startActivity(intent);
+                }
+            });
+        } catch (Exception ee) {
+            System.out.println(ee.getMessage());
+        }
         try {
             button2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
