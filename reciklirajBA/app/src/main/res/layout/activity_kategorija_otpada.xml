@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     tools:context=".kategorija_otpada">
-
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar"/>
 
 
     <ImageView
