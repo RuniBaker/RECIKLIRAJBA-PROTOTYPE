@@ -6,154 +6,122 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     tools:context=".kategorija_otpada">
-    <include layout="@layout/toolbar"/>
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="156dp"
-        android:layout_height="156dp"
-        android:layout_marginEnd="288dp"
-        android:contentDescription="@string/todo"
-        android:rotation="3"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183"
-        app:srcCompat="@drawable/blue_can"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/include4"
+        android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="156dp"
-        android:layout_height="156dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="292dp"
-        android:layout_marginBottom="69dp"
-        app:layout_constraintBottom_toTopOf="@+id/yellowHeadline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greenHeadline"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/green_can"
-        tools:ignore="ImageContrastCheck" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="156dp"
-        android:layout_height="156dp"
-        android:layout_marginEnd="292dp"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.783"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/yellow_can" />
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/blue_can" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="133dp"
-        android:layout_marginBottom="610dp"
-        android:text="@string/u_plave_kontejnere_se_odla_u"
-        android:textColor="@color/mainHubBlue"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545" />
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/green_can" />
 
-    <TextView
-        android:id="@+id/blueText"
-        android:layout_width="@dimen/_179sdp"
-        android:layout_height="212dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="380dp"
-        android:text="test"
-        android:textSize="11.5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/yellow_can" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/u_plave_kontejnere_se_odla_u"
+                    android:textColor="@color/mainHubBlue"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/greenHeadline"
-        android:layout_width="286dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="100dp"
-        android:text="@string/u_zelene_kontejnere_se_odla_e_samo_staklena_ambala_a_boce_tegle_i_sl"
-        android:textColor="@color/mainHubGreen"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+                <TextView
+                    android:id="@+id/blueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingBottom="30dp"
+                    android:text="@string/novine_asopisi_katalozi_nsveske_knjige_slikovnice_npisa_i_i_kompjuterski_papir_pisma_papirnate_vre_ice_nmape_kartonske_fascikle_kartonske_kutije_bez_ljepljive_trake_plastike_stiropora_i_dr_n_nu_plave_kontejnere_ne_smiju_se_odlagati_indigo_papir_ugljeni_papir_fotografije_i_foto_papir_zauljeni_i_prljavi_papir_gumirane_etikete_pelene_i_sl"
+                    android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/greenText"
-        android:layout_width="217dp"
-        android:layout_height="197dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="240dp"
-        android:text="test"
-        android:textSize="11.5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+                <TextView
+                    android:id="@+id/greenHeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="@string/u_zelene_kontejnere_se_odla_e_samo_staklena_ambala_a_boce_tegle_i_sl"
+                    android:textColor="@color/mainHubGreen"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/yellowHeadline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginEnd="108dp"
-        android:text="@string/u_ute_kontejnere_se_odla_u"
-        android:textColor="@color/mainHubYellow"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
+                <TextView
+                    android:id="@+id/greenText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingBottom="30dp"
+                    android:text="U zelene kontejnere ne smiju se odlagati:\nprozorsko staklo,automobilskostaklo,kristalno i optičko staklo,armirano staklo,staklena vuna;\nsijalice i fluorescentne svjetiljke;\nporculanski i keramički predmeti.\nRavno prozorsko staklo se odlaže isključivo u reciklažna dvorišta."
+                    android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/yellowText"
-        android:layout_width="243dp"
-        android:layout_height="219dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="4dp"
-        android:text="test"
-        android:textSize="11.5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/greenText"
-        app:layout_constraintVertical_bias="0.823" />
+                <TextView
+                    android:id="@+id/yellowHeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="@string/u_ute_kontejnere_se_odla_u"
+                    android:textColor="@color/mainHubYellow"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yellowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="plastične vrećice, folije, mjehurasta ambalaža;\nplastične boce od jestivog ulja, destilirane vode, sredstava za čišćenje i pranje, kozmetike, lijekova, prehrambenih proizvoda;\nčaše i posude od jogurta, sira;\npjenasta i zaštitna ambalaža za razne prehrambene proizvode;\nostali proizvodi od plastike: boce od sokova, čepovi, plastični tanjiri, pribor za jelo."
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/toolbar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

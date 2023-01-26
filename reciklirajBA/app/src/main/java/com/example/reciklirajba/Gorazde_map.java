@@ -1,8 +1,10 @@
 package com.example.reciklirajba;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.reciklirajba.databinding.ActivityGorazdeMapBinding;
@@ -20,6 +22,8 @@ public class Gorazde_map extends FragmentActivity implements OnMapReadyCallback 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
 
         binding = ActivityGorazdeMapBinding.inflate(getLayoutInflater());

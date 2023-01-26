@@ -8,74 +8,44 @@
 
 
     <include
+        android:id="@+id/include"
         layout="@layout/toolbar"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="171dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="742dp"
-        android:layout_height="138dp"
-        android:background="@drawable/kategorije_otpada_button"
-        android:elevation="2dp"
-        android:rotation="-90"
-        android:text="@string/kategorije_otpada"
-        android:textColor="#EBEBED"
-        android:textSize="40sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button1"
-        android:layout_width="742dp"
-        android:layout_height="138dp"
-        android:layout_marginStart="161dp"
-
-        android:layout_marginEnd="39dp"
-        android:background="@drawable/lokacije_za_odlaganje_button"
-        android:rotation="-90"
-        android:text="@string/lokacije_za_odlaganje"
-        android:textColor="#EBEBED"
-        android:textSize="40sp"
-        android:visibility="visible"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/include">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
-        android:layout_width="742dp"
-        android:layout_height="138dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="15dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bluebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bluebutton"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-        android:background="@drawable/oznake_na_ambalazi_button"
-        android:rotation="-90"
-        android:text="@string/oznake_na_ambala_ama"
-        android:textColor="#EBEBED"
-        android:textSize="40sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="6.35:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"
-        tools:ignore="DuplicateIds,TextContrastCheck" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yellowbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellowbutton"
+            tools:ignore="SpeakableTextPresentCheck" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/greenbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/greenbutton"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
